@@ -7,7 +7,7 @@ function CreateAd({ userId }) {
     let getAllCategories = async () => {
 
 
-        let response = await fetch(`http://localhost:8000/category/all`);
+        let response = await fetch(`https://market-backend20.herokuapp.com/category/all`);
         let data = await response.json();
         setAllCategories(data);
 
@@ -91,7 +91,7 @@ function CreateAd({ userId }) {
                 </select>
                 <button onClick={() => {
                     console.log(productDetails);
-                    fetch(`http://localhost:8000/post`, {
+                    fetch(`https://market-backend20.herokuapp.com/post`, {
                         method: "POST",
                         headers: {
                             "Content-Type": "application/json",

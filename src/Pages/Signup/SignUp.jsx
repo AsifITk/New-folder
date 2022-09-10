@@ -49,7 +49,7 @@ export default function SignUp() {
         });
 
         (async () => {
-            const rawResponse = await fetch("http://localhost:8000/auth/signup", {
+            const rawResponse = await fetch("https://market-backend20.herokuapp.com/auth/signup", {
                 method: "POST",
                 headers: {
                     Accept: "application/json",

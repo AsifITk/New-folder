@@ -41,7 +41,7 @@ export default function AllProducts({ isloggedIn }) {
     let [products, setProducts] = React.useState([]);
 
     let getProducts = async () => {
-        const rawResponse = await fetch("http://localhost:8000/post/allproducts", {
+        const rawResponse = await fetch("https://market-backend20.herokuapp.com/post/allproducts", {
             method: "GET",
             headers: {
                 Accept: "application/json",
@@ -55,7 +55,7 @@ export default function AllProducts({ isloggedIn }) {
     let showInterest = async (id) => {
         let data = await localStorage.getItem("testObject")
         let info = JSON.parse(data);
-        fetch(`http://localhost:8000/post/interested/${id}`, {
+        fetch(`https://market-backend20.herokuapp.com/post/interested/${id}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

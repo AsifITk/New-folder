@@ -6,7 +6,7 @@ function Admin() {
   let { id } = useParams();
   console.log(id);
   let getUserDetails = () => {
-    return fetch(`http://localhost:8000/admin/${id}`)
+    return fetch(`https://market-backend20.herokuapp.com/admin/${id}`)
 
       .then((res) => res.json())
       .then((data) => {

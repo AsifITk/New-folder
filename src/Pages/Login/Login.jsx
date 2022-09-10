@@ -51,7 +51,7 @@ export default function Login({ userId, setUserId, setIsloggedIn }) {
         // });
 
         let getData = async (userId, setUserId) => {
-            const rawResponse = await fetch("http://localhost:8000/auth/login", {
+            const rawResponse = await fetch("https://market-backend20.herokuapp.com/auth/login", {
                 method: "POST",
                 headers: {
                     Accept: "application/json",
