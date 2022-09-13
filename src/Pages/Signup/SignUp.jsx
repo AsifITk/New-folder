@@ -12,6 +12,7 @@ import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { useNavigate } from "react-router-dom";
 
 function Copyright(props) {
     return (
@@ -60,6 +61,8 @@ export default function SignUp() {
             const content = await rawResponse.json();
 
             console.log(content);
+            await goto("/")
+
         })();
     };
 
@@ -95,7 +98,7 @@ export default function SignUp() {
                                     required
                                     fullWidth
                                     id="firstName"
-                                    label="First Name"
+                                    label="Name"
                                     autoFocus
                                 />
                             </Grid>
