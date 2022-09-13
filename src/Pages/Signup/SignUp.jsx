@@ -35,6 +35,8 @@ function Copyright(props) {
 const theme = createTheme();
 
 export default function SignUp() {
+    let goTo = useNavigate();
+
     const handleSubmit = async (event) => {
         event.preventDefault();
         const data = await new FormData(event.currentTarget);
@@ -61,7 +63,7 @@ export default function SignUp() {
             const content = await rawResponse.json();
 
             console.log(content);
-            await goto("/")
+            await goTo("/")
 
         })();
     };
